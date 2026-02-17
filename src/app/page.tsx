@@ -126,7 +126,7 @@ export default function Home() {
             className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
             style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
           >
-            Cho Thuê Thiết Bị Xây Dựng Uy Tín Quảng Ngãi
+            Cho Thuê Thiết Bị Xây Dựng tại Vạn Tường, Quảng Ngãi
           </h1>
 
           <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-3xl mx-auto">
@@ -145,7 +145,7 @@ export default function Home() {
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full text-white">
               <CheckCircle2 className="w-5 h-5 text-green-400" />
-              <span>Hỗ trợ 24/7</span>
+              <span>Hỗ trợ nhanh chóng</span>
             </div>
           </div>
 
@@ -168,10 +168,10 @@ export default function Home() {
               className="text-2xl md:text-3xl font-bold text-gray-800 mb-4"
               style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
             >
-              Công Hộ - Cho Thuê Thiết Bị Xây Dựng Uy Tín Tại Quảng Ngãi
+              Công Hộ - Cho Thuê Thiết Bị Xây Dựng tại Vạn Tường, Quảng Ngãi
             </h1>
             <p className="text-gray-600 max-w-3xl mx-auto text-base md:text-lg">
-              Với nhiều năm kinh nghiệm trong ngành xây dựng, Công Hộ tự hào là đơn vị hàng đầu cung cấp dịch vụ cho thuê thiết bị xây dựng uy tín tại Quảng Ngãi. Chúng tôi cam kết mang đến những thiết bị chất lượng cao với giá cả cạnh tranh nhất.
+              Chuyên cho thuê các thiết bị xây dựng sau: Xe lu, Máy đầm cóc, Máy đầm bàn, Máy cắt đường, Máy cắt bê tông điện, Máy cắt bê tông xăng, Máy đục bê tông, Máy khoan rút lõi, Máy mài bê tông, Máy trộn bê tông, Pa lăng và nhiều thiết bị khác.
             </p>
           </div>
 
@@ -203,7 +203,7 @@ export default function Home() {
                 Giao Nhận Tận Nơi
               </h3>
               <p className="text-gray-600">
-                Dịch vụ vận chuyển thiết bị đến tận công trình trong toàn tỉnh Quảng Ngãi và các khu vực lân cận.
+                Dịch vụ vận chuyển thiết bị đến tận công trình trong xã Vạn Tường, tỉnh Quảng Ngãi.
               </p>
             </div>
 
@@ -215,10 +215,10 @@ export default function Home() {
                 className="text-lg font-bold text-gray-800 mb-2"
                 style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
               >
-                Hỗ Trợ 24/7
+                Hỗ Trợ nhanh chóng
               </h3>
               <p className="text-gray-600">
-                Đội ngũ kỹ thuật viên sẵn sàng hỗ trợ, hướng dẫn sử dụng và xử lý sự cố mọi lúc mọi nơi.
+                Sẵn sàn hỗ trợ, hướng dẫn sử dụng và xử lý sự cố mọi lúc mọi nơi.
               </p>
             </div>
           </div>
@@ -256,12 +256,10 @@ export default function Home() {
                 <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <Clock className="w-5 h-5 text-orange-500" />
                 </div>
-                <div>
-                  <p className="text-sm text-gray-500">Giờ làm việc</p>
-                  <p className="text-gray-800 font-medium">7:00 - 18:00 (T2-CN)</p>
-                </div>
               </div>
             </div>
+          
+          
           </div>
         </div>
       </section>
@@ -368,7 +366,7 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-gray-300 mb-4">
-                Chuyên cho thuê thiết bị xây dựng uy tín tại Quảng Ngãi. Máy móc chất lượng cao, giá cả cạnh tranh, phục vụ tận tâm.
+                Chuyên cho thuê thiết bị xây dựng tại xã Vạn Tường, tỉnh Quảng Ngãi. Giá cả cạnh tranh, phục vụ tận tâm.
               </p>
             </div>
 
@@ -393,11 +391,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                  <span className="text-gray-300">congho.xaydung@gmail.com</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Clock className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                  <span className="text-gray-300">7:00 - 18:00 (T2-CN)</span>
+                  <span className="text-gray-300">anhnguyencongho@gmail.com</span>
                 </div>
               </div>
             </div>
@@ -428,7 +422,7 @@ export default function Home() {
           {/* Copyright */}
           <div className="border-t border-slate-700 pt-8 text-center">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi. All rights reserved.
+              © {new Date().getFullYear()} Công Hộ - Cho Thuê Thiết Bị Xây Dựng tai Quảng Ngãi. All rights reserved.
             </p>
           </div>
         </div>
