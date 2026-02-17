@@ -204,7 +204,7 @@ export default function Home() {
               Chuyên cho thuê các thiết bị xây dựng như: xe lu, máy đầm cóc, máy đầm bàn, máy cắt đường, máy cắt bê tông, máy đục bê tông, máy khoan rút lõi, máy mài bê tông, máy trộn bê tông, pa lăng và nhiều thiết bị khác.
             </p>
             <p className="text-gray-600 max-w-3xl mx-auto text-base md:text-lg">
-              Nhận thi công lu lèn, đầm nền móng, khoan cắt bê tông và các hạng mục liên quan.
+              Nhận thi công lu, đầm nền móng, khoan cắt bê tông và các hạng mục liên quan.
             </p>
           </div>
         </div>
