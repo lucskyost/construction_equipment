@@ -1,5 +1,4 @@
 'use client'
-
 import { useState, useMemo } from 'react'
 import { products, type Product } from '@/data/products'
 import { Input } from '@/components/ui/input'
