@@ -9,22 +9,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      # - name: Checkout code
+      #   uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: "20"
+      #     cache: "npm"
 
-      - name: Install dependencies
-        run: npm ci
+      # - name: Install dependencies
+      #   run: npm ci
 
-      - name: Build Next.js app
-        run: npm run build
-        # env:
-        # NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+      # - name: Build Next.js app
+      #   run: npm run build
+      # env:
+      # NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
 
       - name: Deploy to EC2 via SSH
         uses: appleboy/ssh-action@v1.0.3
@@ -34,13 +34,18 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            ssh -i
+            ls -al
+
             cd ~/construction_equipment
 
             git pull origin main
 
-            npm install --production
+            npm ci
             npm run build
+            npm prune --omit=dev
 
-            pm2 delete construction_web || true
-            pm2 start npm --name "construction_web" -- start
+            export BUN_INSTALL="$HOME/.bun"
+            export PATH="$BUN_INSTALL/bin:$PATH"
+
+            pm2 delete construction_web || truerm
+            pm2 start $HOME/.bun/bin/bun --name "construction_web" -- .next/standalone/construction_equipment/server.js
