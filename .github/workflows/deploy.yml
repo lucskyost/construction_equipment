@@ -40,7 +40,6 @@ jobs:
 
             git pull origin main
 
-            npm install --omit=dev
             npm ci
             npm run build
             npm prune --omit=dev
