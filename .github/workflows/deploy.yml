@@ -40,8 +40,10 @@ jobs:
 
             git pull origin main
 
-            npm install --production
+            npm install --omit=dev
+            npm ci
             npm run build
+            npm prune --omit=dev
 
-            pm2 delete construction_web || true
+            pm2 delete construction_web || truerm
             pm2 start npm --name "construction_web" -- start
