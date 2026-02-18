@@ -34,8 +34,6 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            sudo su
-            sudo whoami
             ls -al
 
             cd ~/construction_equipment
