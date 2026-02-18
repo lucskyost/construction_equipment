@@ -35,15 +35,4 @@ jobs:
           port: 22
           script: |
             sudo su
-            whoami
-            ls -al
-
-            cd ~/construction_equipment
-
-            git pull origin main
-
-            npm install --production
-            npm run build
-
-            pm2 delete construction_web || true
-            pm2 start npm --name "construction_web" -- start
+            sudo whoami
