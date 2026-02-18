@@ -42,5 +42,5 @@ jobs:
             npm install --production
             npm run build
 
-            pm2 delete construction_equipment || true
-            pm2 start npm --name "construction_equipment" -- start
+            pm2 delete construction_web || true
+            pm2 start npm --name "construction_web" -- start
