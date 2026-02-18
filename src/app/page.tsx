@@ -1,17 +1,16 @@
-'use client'
+"use client";
 
-
-import { useState, useMemo } from 'react'
-import { products, type Product } from '@/data/products'
-import { Input } from '@/components/ui/input'
-import { Button } from '@/components/ui/button'
+import { useState, useMemo } from "react";
+import { products, type Product } from "@/data/products";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-} from '@/components/ui/dialog'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+} from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Building2,
   Phone,
@@ -27,32 +26,33 @@ import {
   Play,
   Image as ImageIcon,
   Facebook,
-} from 'lucide-react'
+} from "lucide-react";
+import { sendGAEvent } from "@next/third-parties/google";
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
-  const [selectedImage, setSelectedImage] = useState<string>('')
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string>("");
 
   const filteredProducts = useMemo(() => {
-    if (!searchQuery.trim()) return products
-    const query = searchQuery.toLowerCase()
+    if (!searchQuery.trim()) return products;
+    const query = searchQuery.toLowerCase();
     return products.filter(
       (product) =>
         product.name.toLowerCase().includes(query) ||
-        product.description.toLowerCase().includes(query)
-    )
-  }, [searchQuery])
+        product.description.toLowerCase().includes(query),
+    );
+  }, [searchQuery]);
 
   const openProductModal = (product: Product) => {
-    setSelectedProduct(product)
-    setSelectedImage(product.image)
-  }
+    setSelectedProduct(product);
+    setSelectedImage(product.image);
+  };
 
   const closeProductModal = () => {
-    setSelectedProduct(null)
-    setSelectedImage('')
-  }
+    setSelectedProduct(null);
+    setSelectedImage("");
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -67,7 +67,7 @@ export default function Home() {
               </div>
               <span
                 className="text-xl md:text-2xl font-bold text-white"
-                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
               >
                 CÔNG HỘ
               </span>
@@ -113,11 +113,8 @@ export default function Home() {
         </div>
       </header>
 
-
-
       {/* HERO BANNER */}
       <section className="relative py-12 md:py-20">
-
         {/* Background Image */}
         <div
           className="absolute inset-0"
@@ -133,11 +130,9 @@ export default function Home() {
 
         {/* Content */}
         <div className="relative max-w-7xl mx-auto px-4 text-center">
-
-          
           <h1
             className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
-            style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
           >
             Cho Thuê Thiết Bị Xây Dựng tại Vạn Tường, Quảng Ngãi
           </h1>
@@ -162,11 +157,8 @@ export default function Home() {
             </div>
           </div>
 
-
-
           {/* CTA Buttons */}
           <div className="flex flex-col items-center gap-4 w-full max-w-sm mx-auto">
-
             <a
               href="tel:0386660506"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-orange-600 hover:to-orange-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1"
@@ -184,9 +176,7 @@ export default function Home() {
               <Facebook className="w-5 h-5" />
               Liên hệ Facebook
             </a>
-
           </div>
-
         </div>
       </section>
 
@@ -196,15 +186,19 @@ export default function Home() {
           <div className="text-center mb-10">
             <h1
               className="text-2xl md:text-3xl font-bold text-gray-800 mb-4"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
               Công Hộ - Cho Thuê Thiết Bị Xây Dựng tại Vạn Tường, Quảng Ngãi
             </h1>
             <p className="text-gray-600 max-w-3xl mx-auto text-base md:text-lg">
-              Chuyên cho thuê các thiết bị xây dựng như: xe lu, máy đầm cóc, máy đầm bàn, máy cắt đường, máy cắt bê tông, máy đục bê tông, máy khoan rút lõi, máy mài bê tông, máy trộn bê tông, pa lăng và nhiều thiết bị khác.
+              Chuyên cho thuê các thiết bị xây dựng như: xe lu, máy đầm cóc, máy
+              đầm bàn, máy cắt đường, máy cắt bê tông, máy đục bê tông, máy
+              khoan rút lõi, máy mài bê tông, máy trộn bê tông, pa lăng và nhiều
+              thiết bị khác.
             </p>
             <p className="text-gray-600 max-w-3xl mx-auto text-base md:text-lg">
-              Nhận thi công lu, đầm nền móng, khoan cắt bê tông và các hạng mục liên quan.
+              Nhận thi công lu, đầm nền móng, khoan cắt bê tông và các hạng mục
+              liên quan.
             </p>
           </div>
         </div>
@@ -216,7 +210,7 @@ export default function Home() {
           <div className="text-center mb-10">
             <h2
               className="text-2xl md:text-3xl font-bold text-gray-800 mb-2"
-              style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+              style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
             >
               Thiết Bị Cho Thuê
             </h2>
@@ -225,7 +219,8 @@ export default function Home() {
             </p>
             {searchQuery && (
               <p className="text-orange-500 mt-2">
-                Tìm thấy {filteredProducts.length} kết quả cho &quot;{searchQuery}&quot;
+                Tìm thấy {filteredProducts.length} kết quả cho &quot;
+                {searchQuery}&quot;
               </p>
             )}
           </div>
@@ -236,7 +231,12 @@ export default function Home() {
                 <div
                   key={product.id}
                   className="group bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer transform hover:-translate-y-1"
-                  onClick={() => openProductModal(product)}
+                  onClick={() => {
+                    sendGAEvent("event", "productClicked", {
+                      value: product?.name ?? "Unknown Product",
+                    });
+                    openProductModal(product);
+                  }}
                 >
                   {/* Image */}
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -261,16 +261,16 @@ export default function Home() {
                   <div className="p-5">
                     <h3
                       className="text-lg font-bold text-gray-800 mb-2 group-hover:text-orange-500 transition-colors"
-                      style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                      style={{
+                        fontFamily: "var(--font-montserrat), sans-serif",
+                      }}
                     >
                       {product.name}
                     </h3>
                     <p className="text-gray-600 text-sm line-clamp-2 mb-4">
                       {product.description}
                     </p>
-                    <Button
-                      className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white"
-                    >
+                    <Button className="w-full cursor-pointer bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white">
                       Xem chi tiết
                       <ChevronRight className="w-4 h-4 ml-1" />
                     </Button>
@@ -281,11 +281,13 @@ export default function Home() {
           ) : (
             <div className="text-center py-16">
               <Search className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <p className="text-gray-500 text-lg">Không tìm thấy thiết bị phù hợp</p>
+              <p className="text-gray-500 text-lg">
+                Không tìm thấy thiết bị phù hợp
+              </p>
               <Button
                 variant="outline"
                 className="mt-4"
-                onClick={() => setSearchQuery('')}
+                onClick={() => setSearchQuery("")}
               >
                 Xóa bộ lọc
               </Button>
@@ -306,13 +308,14 @@ export default function Home() {
                 </div>
                 <span
                   className="text-xl font-bold"
-                  style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
                   CÔNG HỘ
                 </span>
               </div>
               <p className="text-gray-300 mb-4">
-                Chuyên cho thuê thiết bị xây dựng tại xã Vạn Tường, tỉnh Quảng Ngãi. Giá cả cạnh tranh, phục vụ tận tâm.
+                Chuyên cho thuê thiết bị xây dựng tại xã Vạn Tường, tỉnh Quảng
+                Ngãi. Giá cả cạnh tranh, phục vụ tận tâm.
               </p>
             </div>
 
@@ -320,38 +323,44 @@ export default function Home() {
             <div>
               <h4
                 className="text-lg font-bold mb-4"
-                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
               >
                 Liên Hệ
               </h4>
               <div className="space-y-3">
                 <div className="flex items-center gap-3">
                   <MapPin className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                  <span className="text-gray-300">Xã Vạn Tường, tỉnh Quảng Ngãi</span>
+                  <span className="text-gray-300">
+                    Xã Vạn Tường, tỉnh Quảng Ngãi
+                  </span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                  <a href="tel:0386660506" className="text-gray-300 hover:text-orange-400 transition-colors">
+                  <a
+                    href="tel:0386660506"
+                    className="text-gray-300 hover:text-orange-400 transition-colors"
+                  >
                     0386660506
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
                   <Mail className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                  <span className="text-gray-300">anhnguyencongho@gmail.com</span>
+                  <span className="text-gray-300">
+                    anhnguyencongho@gmail.com
+                  </span>
                 </div>
                 {/* ĐÃ THÊM: Facebook Link */}
                 <div className="flex items-center gap-3">
                   <Facebook className="w-5 h-5 text-orange-400 flex-shrink-0" />
-                  <a 
-                    href="https://www.facebook.com/ho.cong.5011516" 
-                    target="_blank" 
+                  <a
+                    href="https://www.facebook.com/ho.cong.5011516"
+                    target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-300 hover:text-orange-400 transition-colors"
                   >
                     Facebook: ho.cong.5011516
                   </a>
                 </div>
-              
               </div>
             </div>
 
@@ -359,7 +368,7 @@ export default function Home() {
             <div>
               <h4
                 className="text-lg font-bold mb-4"
-                style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
               >
                 Dịch Vụ
               </h4>
@@ -381,7 +390,8 @@ export default function Home() {
           {/* Copyright */}
           <div className="border-t border-slate-700 pt-8 text-center">
             <p className="text-gray-400">
-              © {new Date().getFullYear()} Công Hộ - Cho Thuê Thiết Bị Xây Dựng tai Quảng Ngãi. All rights reserved.
+              © {new Date().getFullYear()} Công Hộ - Cho Thuê Thiết Bị Xây Dựng
+              tai Quảng Ngãi. All rights reserved.
             </p>
           </div>
         </div>
@@ -395,7 +405,7 @@ export default function Home() {
               <DialogHeader>
                 <DialogTitle
                   className="text-xl md:text-2xl font-bold text-gray-800"
-                  style={{ fontFamily: 'var(--font-montserrat), sans-serif' }}
+                  style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
                 >
                   {selectedProduct.name}
                 </DialogTitle>
@@ -404,12 +414,18 @@ export default function Home() {
               {/* Gallery with Tabs */}
               <Tabs defaultValue="images" className="w-full">
                 <TabsList className="w-full justify-start mb-4">
-                  <TabsTrigger value="images" className="flex items-center gap-2">
+                  <TabsTrigger
+                    value="images"
+                    className="flex items-center gap-2"
+                  >
                     <ImageIcon className="w-4 h-4" />
                     Hình ảnh
                   </TabsTrigger>
                   {selectedProduct.video && (
-                    <TabsTrigger value="video" className="flex items-center gap-2">
+                    <TabsTrigger
+                      value="video"
+                      className="flex items-center gap-2"
+                    >
                       <Play className="w-4 h-4" />
                       Video
                     </TabsTrigger>
@@ -434,10 +450,12 @@ export default function Home() {
                         key={index}
                         className={`flex-shrink-0 w-20 h-20 rounded-lg overflow-hidden border-2 transition-all ${
                           selectedImage === img
-                            ? 'border-orange-500 ring-2 ring-orange-200'
-                            : 'border-gray-200 hover:border-orange-300'
+                            ? "border-orange-500 ring-2 ring-orange-200"
+                            : "border-gray-200 hover:border-orange-300"
                         }`}
-                        onClick={() => setSelectedImage(img)}
+                        onClick={() => {
+                          setSelectedImage(img);
+                        }}
                       >
                         <img
                           src={img}
@@ -453,7 +471,7 @@ export default function Home() {
                 {selectedProduct.video && (
                   <TabsContent value="video" className="mt-0">
                     <div className="relative aspect-video rounded-xl overflow-hidden bg-gray-900">
-                      {selectedProduct.videoType === 'youtube' ? (
+                      {selectedProduct.videoType === "youtube" ? (
                         <iframe
                           src={`https://www.youtube.com/embed/${selectedProduct.video}`}
                           title={`${selectedProduct.name} - Video`}
@@ -485,19 +503,22 @@ export default function Home() {
               </div>
 
               {/* Features */}
-              {selectedProduct.features && selectedProduct.features.length > 0 && (
-                <div className="mt-4">
-                  <h3 className="text-lg font-bold text-gray-800 mb-2">Tính năng</h3>
-                  <ul className="space-y-2">
-                    {selectedProduct.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-600">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+              {selectedProduct.features &&
+                selectedProduct.features.length > 0 && (
+                  <div className="mt-4">
+                    <h3 className="text-lg font-bold text-gray-800 mb-2">
+                      Tính năng
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedProduct.features.map((feature, index) => (
+                        <li key={index} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
+                          <span className="text-gray-600">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
               {/* CTA Buttons */}
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -521,43 +542,10 @@ export default function Home() {
         </DialogContent>
       </Dialog>
     </div>
-  )
+  );
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 'use client'
-
 
 // import { useState, useMemo } from 'react'
 // import { products, type Product } from '@/data/products'
@@ -617,13 +605,13 @@ export default function Home() {
 //       {/* HEADER - Sticky với ảnh background */}
 //       <header className="sticky top-0 z-50 shadow-lg relative overflow-hidden">
 //         {/* Background Image */}
-//         <div 
+//         <div
 //           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
 //           style={{ backgroundImage: "url('/assets/background.jpg')" }}
 //         />
 //         {/* Overlay gradient */}
 //         <div className="absolute inset-0 bg-gradient-to-r from-orange-500/85 to-orange-600/85" />
-        
+
 //         {/* Content */}
 //         <div className="relative z-10 max-w-7xl mx-auto px-4 py-3">
 //           <div className="flex items-center justify-between gap-4">
@@ -883,16 +871,16 @@ export default function Home() {
 //                 {/* ĐÃ THÊM: Facebook Link */}
 //                 <div className="flex items-center gap-3">
 //                   <Facebook className="w-5 h-5 text-orange-400 flex-shrink-0" />
-//                   <a 
-//                     href="https://www.facebook.com/ho.cong.5011516" 
-//                     target="_blank" 
+//                   <a
+//                     href="https://www.facebook.com/ho.cong.5011516"
+//                     target="_blank"
 //                     rel="noopener noreferrer"
 //                     className="text-gray-300 hover:text-orange-400 transition-colors"
 //                   >
 //                     Facebook: ho.cong.5011516
 //                   </a>
 //                 </div>
-              
+
 //               </div>
 //             </div>
 

@@ -33,7 +33,6 @@ This scaffold provides a robust foundation built with:
 ### 🎨 Advanced UI Features
 - **📊 TanStack Table** - Headless UI for building tables and datagrids
 - **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
 - **🖼️ Sharp** - High performance image processing
 
 ### 🌍 Internationalization & Utilities
@@ -109,7 +108,6 @@ This scaffold includes a comprehensive set of modern web development tools:
 
 ### 📊 Advanced Data Features
 - **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
 - **Forms**: Type-safe forms with React Hook Form + Zod validation
 
 ### 🎨 Interactive Features
