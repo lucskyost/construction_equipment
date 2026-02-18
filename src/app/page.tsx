@@ -136,6 +136,13 @@ export default function Home() {
           >
             Cho Thuê Thiết Bị Xây Dựng tại Vạn Tường, Quảng Ngãi
           </h1>
+          <h1
+            className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+            style={{ fontFamily: "var(--font-montserrat), sans-serif" }}
+          >
+            Nhận Thi Công Lu Đầm Nền Móng, Khoan cắt bê tông các loại
+          </h1>
+          
 
           <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-3xl mx-auto">
             Máy móc chất lượng cao • Giá cạnh tranh • Giao hàng tận nơi
@@ -314,8 +321,9 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-gray-300 mb-4">
-                Chuyên cho thuê thiết bị xây dựng tại xã Vạn Tường, tỉnh Quảng
-                Ngãi. Giá cả cạnh tranh, phục vụ tận tâm.
+                Chuyên cho thuê thiết bị xây dựng tại xã Vạn Tường, tỉnh Quảng Ngãi.
+                Nhận thi công lu đầm nền móng, khoan cắt bê tông các loại.
+                Giá cả cạnh tranh, phục vụ tận tâm.
               </p>
             </div>
 
