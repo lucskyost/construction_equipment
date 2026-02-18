@@ -44,5 +44,8 @@ jobs:
             npm run build
             npm prune --omit=dev
 
+            export BUN_INSTALL="$HOME/.bun"
+            export PATH="$BUN_INSTALL/bin:$PATH"
+
             pm2 delete construction_web || truerm
-            pm2 start npm --name "construction_web" -- start
+            pm2 start $HOME/.bun/bin/bun --name "construction_web" -- .next/standalone/construction_equipment/server.js
