@@ -34,9 +34,8 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
           script: |
-            ssh -i
+            sudo -i
 
-            ls -al
             cd ~/construction_equipment
 
             git pull origin main
