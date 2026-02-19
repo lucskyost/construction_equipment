@@ -22,7 +22,7 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi",
-  image: "/thumbnail.png",
+  image: "https://thietbixaydung.nguyencongho.site/thumbnail.png",
   telephone: "0386660506",
   address: {
     "@type": "PostalAddress",
@@ -131,7 +131,7 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     images: [
       {
-        url: "/thumbnail.png",
+        url: "https://thietbixaydung.nguyencongho.site/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi",
@@ -143,7 +143,7 @@ export const metadata: Metadata = {
     title: "Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi",
     description:
       "Máy móc xây dựng chất lượng cao, giá cạnh tranh. Giao hàng tận nơi. Hotline: 0386660506",
-    images: ["/thumbnail.png"],
+    images: ["https://thietbixaydung.nguyencongho.site/thumbnail.png"],
   },
 
   robots: {
