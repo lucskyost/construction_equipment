@@ -132,7 +132,7 @@ export const metadata: Metadata = {
     locale: "vi_VN",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+        url: "/thumbnail.png",
         width: 1200,
         height: 630,
         alt: "Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi",
@@ -144,10 +144,9 @@ export const metadata: Metadata = {
     title: "Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi",
     description:
       "Máy móc xây dựng chất lượng cao, giá cạnh tranh. Giao hàng tận nơi. Hotline: 0386660506",
-    images: [
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
-    ],
+    images: ["/thumbnail.png"],
   },
+
   robots: {
     index: true,
     follow: true,
