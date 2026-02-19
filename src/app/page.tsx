@@ -142,10 +142,9 @@ export default function Home() {
           >
             Nhận Thi Công Lu Đầm Nền Móng, Khoan cắt bê tông các loại
           </h1>
-          
 
-          <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-3xl mx-auto">
-            Máy móc chất lượng cao • Giá cạnh tranh • Giao hàng tận nơi
+          <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-3xl mx-auto max-sm:whitespace-break-spaces">
+            Máy móc chất lượng cao {"\n"}• Giao hàng tận nơi
           </p>
 
           {/* Badges */}
@@ -321,9 +320,9 @@ export default function Home() {
                 </span>
               </div>
               <p className="text-gray-300 mb-4">
-                Chuyên cho thuê thiết bị xây dựng tại xã Vạn Tường, tỉnh Quảng Ngãi.
-                Nhận thi công lu đầm nền móng, khoan cắt bê tông các loại.
-                Giá cả cạnh tranh, phục vụ tận tâm.
+                Chuyên cho thuê thiết bị xây dựng tại xã Vạn Tường, tỉnh Quảng
+                Ngãi. Nhận thi công lu đầm nền móng, khoan cắt bê tông các loại.
+                Phục vụ tận tâm.
               </p>
             </div>
 
