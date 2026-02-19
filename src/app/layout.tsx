@@ -126,7 +126,7 @@ export const metadata: Metadata = {
     title: "Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi",
     description:
       "Máy móc xây dựng chất lượng cao, giá cạnh tranh. Giao hàng tận nơi tại Quảng Ngãi. Hotline: 0386660506",
-    url: "https://congho-xaydung.vn",
+    url: "https://thietbixaydung.nguyencongho.site",
     siteName: "Công Hộ - Thiết Bị Xây Dựng",
     type: "website",
     locale: "vi_VN",
@@ -159,7 +159,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://congho-xaydung.vn",
+    canonical: "https://thietbixaydung.nguyencongho.site",
   },
 };
 
