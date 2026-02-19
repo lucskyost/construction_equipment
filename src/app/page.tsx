@@ -119,7 +119,7 @@ export default function Home() {
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: "url('/assets/background.jpg')",
+            backgroundImage: "url('/assets/background2.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
