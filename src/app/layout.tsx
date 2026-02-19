@@ -22,8 +22,7 @@ const schemaOrg = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Công Hộ - Cho Thuê Thiết Bị Xây Dựng Quảng Ngãi",
-  image:
-    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
+  image: "/thumbnail.png",
   telephone: "0386660506",
   address: {
     "@type": "PostalAddress",
@@ -31,7 +30,7 @@ const schemaOrg = {
     addressLocality: "Quảng Ngãi",
     addressCountry: "VN",
   },
-  url: "https://congho-xaydung.vn",
+  url: "https://thietbixaydung.nguyencongho.site",
   priceRange: "$$",
   openingHours: "Mo-Su 07:00-18:00",
   description:
