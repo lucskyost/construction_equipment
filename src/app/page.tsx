@@ -117,11 +117,10 @@ export default function Home() {
       <section className="relative py-12 md:py-20">
         {/* Background Image */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 bg-center  max-sm:bg-position-[65%_center] "
           style={{
-            backgroundImage: "url('/assets/background2.jpg')",
+            backgroundImage: "url('/assets/background2.png')",
             backgroundSize: "cover",
-            backgroundPosition: "center",
           }}
         />
 
