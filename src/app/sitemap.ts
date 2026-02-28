@@ -1,5 +1,8 @@
 import { MetadataRoute } from "next";
 
+// update site map after 24h
+export const revalidate = 86400;
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
